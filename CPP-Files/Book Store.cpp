@@ -1,0 +1,31 @@
+#include "Book Store.h"
+
+BookStore::BookStore(int id, string n, double p, int q, string a, int pa)
+    :Resource(id, n, p, q)
+{
+    author = a;
+    pages = pa;
+}
+
+void BookStore::display()
+{
+    cout << "Book ID: " << ID
+        << " | Name: " << name
+        << " | Price: " << price << " EGP"
+        << " | Stock: " << quantity
+        << " | Author: " << author
+        << " | Pages: " << pages << endl;
+}
+string BookStore::GetCategory()
+{
+    return "Book Store";
+}
+string BookStore::GetAuthor()
+{
+    return author;
+}
+
+int BookStore::GetPages()
+{
+    return pages;
+}
